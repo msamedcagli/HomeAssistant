@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*
+  ARKA PLAN RESMİ EKLEMEK İÇİN:
+  1. Aşağıdaki `background-image` satırındaki yorumu kaldırın.
+  2. 'path/to/your/image.jpg' kısmını kendi resminizin yolu ile değiştirin.
+     Eğer resim `public` klasöründeyse, yolu `/image.jpg` şeklinde olabilir.
+*/
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Open Sans', sans-serif; /* Changed font-family */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a2e;
+  /* background-image: linear-gradient(45deg, #1a1a2e 0%, #16213e 74%); */
+  background-image: url('/img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #e0e0e0;
 }
 
 code {

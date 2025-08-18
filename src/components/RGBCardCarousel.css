@@ -1,0 +1,50 @@
+.rgb-carousel {
+  padding: 0;
+  position: relative;
+}
+
+.carousel-wrapper {
+  display: flex;
+  width: 100%;
+  flex-grow: 1; /* Allow the wrapper to grow */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff rgba(0, 0, 0, 0.2);
+}
+
+.carousel-page {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 28px 20px 20px 20px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar styles for Webkit browsers */
+.carousel-wrapper::-webkit-scrollbar {
+  height: 4px; /* Make it narrower */
+}
+
+.carousel-wrapper::-webkit-scrollbar-track {
+  background: transparent; /* Changed to transparent */
+  border-radius: 4px;
+}
+
+.carousel-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 123, 255, 0.5); /* Semi-transparent */
+  border-radius: 4px;
+}
+
+.carousel-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #007bff; /* Fully opaque on hover */
+}
+
+.carousel-wrapper::-webkit-scrollbar-button {
+  display: none;
+  border: none; /* Added border: none */
+}
+
