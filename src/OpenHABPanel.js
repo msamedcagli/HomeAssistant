@@ -63,6 +63,7 @@ const OpenHABPanel = () => {
                                     case 3: r = p; g = q; b = v; break;
                                     case 4: r = t; g = p; b = v; break;
                                     case 5: r = v; g = p; b = q; break;
+                                        default: r = 0; g = 0; b = 0; // Handle unexpected values
                                 }
                                 r = Math.round(r * 255);
                                 g = Math.round(g * 255);
@@ -161,6 +162,8 @@ const OpenHABPanel = () => {
                                             case bNorm:
                                                 h = (rNorm - gNorm) / d + 4;
                                                 break;
+                                                default:
+                                                    h = 0; // Handle unexpected values
                                         }
                                         h /= 6;
                                     }
@@ -238,11 +241,11 @@ const OpenHABPanel = () => {
                     <Card title="Sensörler">
                         <div style={{display: 'flex', flexDirection: 'column', gap: '12px'}}>
                             {items.filter(item => item.label?.toLowerCase().includes('hareket') || item.name?.toLowerCase().includes('motion')).map(item => {
-                                // Hareket sensörü için state'i açık/kapalı olarak göster ve hizalı olsun
-                                let stateText = 'Kapalı';
+                                // Hareket sensörü için state'i "Hareket Var"/"Hareket Yok" olarak göster
+                                let stateText = 'Hareket Yok';
                                 let stateClass = 'state-closed';
                                 if (item.state === 'ON' || item.state === 'OPEN' || item.state === true) {
-                                    stateText = 'Açık';
+                                    stateText = 'Hareket Var';
                                     stateClass = 'state-open';
                                 }
                                 return (
