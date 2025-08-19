@@ -1,16 +1,22 @@
-
 .card {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(44, 62, 80, 0.5) 100%); /* Adjusted transparency */
-  border: 1px solid rgba(255,255,255,0.10); /* Restored border */
-  border-radius: 20px;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.22); /* Restored box-shadow */
-  padding: 28px 20px 20px 20px;
-  aspect-ratio: 1 / 0.80;
-  min-width: 220px;
+  background: linear-gradient(135deg, rgba(30,41,59,0.28) 0%, rgba(44,62,80,0.28) 100%);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  padding: 24px 24px;
+  min-width: 320px;
   max-width: 340px;
+  width: 340px;
+  min-height: 340px;
+  max-height: 340px;
+  height: 340px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   transition: box-shadow 0.22s cubic-bezier(.4,2,.3,1);
 }
 
@@ -23,13 +29,13 @@
 /* Başlık */
 
 .card-title {
-  margin: 0 0 14px 0;
+  margin: 0 0 6px 0;
   font-size: 1.25rem;
   font-weight: 600;
   color: #fff;
   text-align: center;
   border-bottom: 1px solid rgba(255,255,255,0.12);
-  padding-bottom: 10px;
+  padding-bottom: 4px;
   flex-shrink: 0;
   letter-spacing: 0.5px;
   font-family: 'Open Sans', sans-serif;
@@ -40,7 +46,8 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Ortalar */
-  align-items: stretch;     /* Make items fill the width */
-  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
 }

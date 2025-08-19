@@ -1,19 +1,16 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import './Switch.css';
 
-const Switch = ({ label }) => {
-  const [isOn, setIsOn] = useState(false);
-
-  const toggleSwitch = () => {
-    setIsOn(!isOn);
-  };
-
+const Switch = ({ isOn, onToggle }) => {
   return (
     <div className="switch-container">
-      <span>{label}</span>
       <label className="switch">
-        <input type="checkbox" checked={isOn} onChange={toggleSwitch} />
+        <input
+          type="checkbox"
+          checked={isOn}
+          onChange={e => onToggle(e.target.checked)}
+        />
         <span className="slider round"></span>
       </label>
     </div>

@@ -1,0 +1,140 @@
+/* ...existing code... */
+
+.openhab-panel {
+    padding: 40px;
+    background: transparent;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.openhab-panel h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 80px;
+}
+
+.items-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 34px;
+    flex-wrap: nowrap;
+}
+
+.item-info {
+    margin-bottom: 16px;
+}
+
+.item-label {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #444;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.item-state {
+    font-size: 0.95em;
+    color: #666;
+    background-color: #eee;
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.item-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.item-controls button {
+    flex-grow: 1;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #43e97b 0%, #007bff 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.08em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.item-controls button:first-of-type {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #222;
+}
+
+.item-controls button:first-of-type:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+}
+
+.item-controls button:last-of-type {
+    background: linear-gradient(90deg, #ff6a6a 0%, #ffb86c 100%);
+    color: #222;
+}
+
+.item-controls button:last-of-type:hover {
+    background: linear-gradient(90deg, #ffb86c 0%, #ff6a6a 100%);
+}
+
+.panel-error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    border: 1px solid #D8000C;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(30,41,59,0.85) 0%, rgba(44,62,80,0.85) 100%);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  padding: 24px 24px;
+  min-width: 320px;
+  max-width: 340px;
+  width: 340px;
+  min-height: 340px;
+  max-height: 340px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed to align items to the top */
+  align-items: center;
+  gap: 16px;
+  transition: box-shadow 0.22s cubic-bezier(.4,2,.3,1);
+}
+
+.card:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.32);
+  border-color: #007bff;
+}
+
+.card-title {
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 4px;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align all card content to the top */
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
