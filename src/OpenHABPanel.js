@@ -255,32 +255,6 @@ const OpenHABPanel = () => {
                                     </div>
                                 );
                             })}
-                            {items.filter(item => {
-                                // Kapı sensörü için daha geniş bir filtre
-                                const label = item.label?.toLowerCase() || '';
-                                const name = item.name?.toLowerCase() || '';
-                                return (
-                                    label.includes('kapı') ||
-                                    label.includes('door') ||
-                                    name.includes('kapı') ||
-                                    name.includes('door') ||
-                                    (label.includes('sensor') && label.includes('door'))
-                                );
-                            }).map(item => {
-                                // Kapı sensörü için state'i OPEN/CLOSED olarak göster
-                                let stateText = 'CLOSED';
-                                let stateClass = 'state-closed';
-                                if (item.state === 'OPEN' || item.state === 'ON' || item.state === true) {
-                                    stateText = 'OPEN';
-                                    stateClass = 'state-open';
-                                }
-                                return (
-                                    <div key={item.name} style={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '8px'}}>
-                                        <span>{item.label === 'Generic MQTT Thing Door Sensor Door Sensor' ? 'Kapı Sensörü' : (item.label || item.name)}</span>
-                                        <span className={`item-state ${stateClass}`}>{stateText}</span>
-                                    </div>
-                                );
-                            })}
                         </div>
                     </Card>
                     {/* Diğer itemlar (Röle ve sensör harici) */}
