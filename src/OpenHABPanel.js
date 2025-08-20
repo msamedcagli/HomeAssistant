@@ -133,7 +133,7 @@ const OpenHABPanel = () => {
                     <Card className="camera-card">
                         <div className="camera-view">
                             <iframe
-                                src="http://192.168.1.162:1984/stream.html?src=hikvision_main"
+                                src="http://192.168.1.145:1984/stream.html?src=hikvision_main"
                                 title="Hikvision Kamera"
                                 style={{ border: 'none', borderRadius: '16px', background: '#222', boxShadow: '0 2px 16px rgba(0,0,0,0.25)' }}
                                 allowFullScreen
